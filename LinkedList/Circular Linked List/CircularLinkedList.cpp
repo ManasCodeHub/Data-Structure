@@ -1,37 +1,39 @@
-#include<iostream>
-#include<stdlib.h>
+#include <iostream>
+#include <stdlib.h>
 using namespace std;
 
-struct node {
+struct node
+{
     int data;
     struct node *next;
 };
 
-
-int main() {
-
+ node *create(int data)
+{
     struct node *head = (struct node *)malloc(sizeof(struct node));
-    struct node *first = (struct node *)malloc(sizeof(struct node));
-    struct node *second = (struct node *)malloc(sizeof(struct node));
-    struct node *last;
+    head->next = head;
+    head->data = data;
+    return head;
+}
 
-    head->data = 10;
-    head->next = first;
-
-    first->data = 20;
-    first->next = second;
-
-    second->data = 30;
-    second->next = head;
-
-    last = second;
-
-    struct node *ptr;
-    ptr = head;
-    while(ptr!=NULL) {
-        cout << ptr->data << endl;
-        ptr = ptr->next;
+void displayList(node *head) {
+    node *current;
+    current = head;
+    while (current!=head)
+    {
+        cout << current->data;
+        current = current->next;
     }
+    
+}
+
+int main()
+{
+    node *head;
+    create(10);
+    head = create(20);
+
+    displayList(head);
 
     return 0;
 }

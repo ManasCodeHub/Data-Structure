@@ -35,7 +35,7 @@ for(int j = 0; j<n; j++) {
         cgp.lowestCGPA = studentsInfo[j].cgpa;
     }
 }
-    cout << cgp.highestCGPA<<endl;
-    cout << cgp.lowestCGPA<<endl;
+    cout << "Highest CGPA is:  " << cgp.highestCGPA<<endl;
+    cout << "Highest CGPA is:  " << cgp.lowestCGPA<<endl;
 return 0;
 }
