@@ -15,9 +15,9 @@ public:
         b = x;
     }
 
-    calculate(const calculate& ref) {
-        a = ref.a;
-        b = ref.b;
+    calculate(calculate& ref) {
+        this->a = ref.a;
+        this->b = ref.b;
     }
 
     void areaCircle() {
@@ -62,6 +62,8 @@ int main() {
                 cin >> length >> side;
                 obj1 = calculate(length, side);
                 obj1.areaTriangle();
+                
+                // calculate obj2(obj1);
                 break;
 
             case 3:

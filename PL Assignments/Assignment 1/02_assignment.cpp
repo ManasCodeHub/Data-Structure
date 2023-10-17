@@ -13,11 +13,7 @@ int sum() {
     cout<<"Answer of x: " << x << " "<< endl;
     }
 }
-
-
 int main() {
-    
-     sum();
-
+    sum();
     return 0;
 }
